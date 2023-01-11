@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './Statictic.module.css';
 import Notification from 'components/Notification/Notification';
 
 const Statistics = ({ state }) => {
@@ -8,23 +9,27 @@ const Statistics = ({ state }) => {
 
   return (
     <div>
-      <h2>Statistics</h2>
+      <h2 className={styles.statistics__title}>Statistics</h2>
       {total !== 0 ? (
         <ul>
           <li>
-            Good:<span>{good}</span>
+            Good:<span className={styles.statistics__value}>{good}</span>
           </li>
           <li>
-            Neutral:<span>{neutral}</span>
+            Neutral:<span className={styles.statistics__value}>{neutral}</span>
           </li>
           <li>
-            Bad:<span>{bad}</span>
+            Bad:<span className={styles.statistics__value}>{bad}</span>
           </li>
           <li>
-            Total:<span>{total}</span>
+            Total:<span className={styles.statistics__value}>{total}</span>
           </li>
           <li>
-            Positive feedback:<span>{percentage.toFixed(2)}</span>%
+            Positive feedback:
+            <span className={styles.statistics__value}>
+              {percentage.toFixed(2)}
+            </span>
+            %
           </li>
         </ul>
       ) : (

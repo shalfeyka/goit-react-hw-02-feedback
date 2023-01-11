@@ -1,0 +1,22 @@
+.feedback {
+    margin: auto;
+}
+
+.feedback__title {
+    margin-bottom: 25px;
+}
+
+.feedback__list {
+ display: flex;
+
+}
+.feedback__item {
+margin-right: 10px;
+}
+.feedback__button {
+ padding: 5px;
+}
+.feedback__button:hover {
+    background-color: blue;
+    color: white;
+}
